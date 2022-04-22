@@ -23,6 +23,13 @@
 
 `pip install -r /path/to/requirements.txt`
 
+Сделать и применить миграции
+
+```
+python manage.py makemirations
+python manage.py migrate
+```
+
 Для корректной работы нужен ключ для Django. Установить его в [папку](ToDoList_project/my_constants_example.py) с
 константами, реализовать зависимости
 
