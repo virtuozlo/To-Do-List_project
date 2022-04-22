@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}
+    {% trans 'Изменить задачу' %}
+{% endblock title %}
+{% block content %}
+    <p>{% trans 'Моя задача' %} {{ todo.name }}</p>
+    <p>{% trans 'Выполнить до' %} {{ todo.date }}</p>
+    <h2>{% trans 'Изменить задачу' %}</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">{% trans 'Изменить задачу' %}</button>
+    </form>
+{% endblock content %}

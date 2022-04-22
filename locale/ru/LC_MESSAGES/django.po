@@ -1,0 +1,149 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-22 16:20+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\ToDoList_project\settings.py:125
+msgid "Русский"
+msgstr ""
+
+#: .\ToDoList_project\settings.py:126
+msgid "Английский"
+msgstr ""
+
+#: .\templates\base.html:22
+msgid "Добро пожаловать на нашу страницу"
+msgstr ""
+
+#: .\templates\base.html:30
+msgid "В задачи"
+msgstr ""
+
+#: .\templates\base.html:31 .\templates\todo_app\todo_create.html:4
+#: .\templates\todo_app\todo_create.html:7
+msgid "Добавить задачу"
+msgstr ""
+
+#: .\templates\todo_app\todo_create.html:13
+msgid "В задачи!"
+msgstr ""
+
+#: .\templates\todo_app\todo_list.html:5
+msgid "Мои задачи"
+msgstr ""
+
+#: .\templates\todo_app\todo_list.html:13
+msgid "Показать задачи на дату"
+msgstr ""
+
+#: .\templates\todo_app\todo_list.html:18
+msgid "Отсортировать по дате"
+msgstr ""
+
+#: .\templates\todo_app\todo_list.html:23
+msgid "Отсортировать по выполнению"
+msgstr ""
+
+#: .\templates\todo_app\todo_list.html:29
+#: .\templates\todo_app\todo_list.html:36
+msgid "Показать выполненные задачи"
+msgstr ""
+
+#: .\templates\todo_app\todo_list.html:43 .\todo_app\models.py:20
+msgid "Задача"
+msgstr ""
+
+#: .\templates\todo_app\todo_list.html:44
+msgid "Выполнена"
+msgstr ""
+
+#: .\templates\todo_app\todo_list.html:45
+msgid "Не выполнена"
+msgstr ""
+
+#: .\templates\todo_app\todo_list.html:49
+msgid "Удалить задачу"
+msgstr ""
+
+#: .\templates\todo_app\todo_list.html:54
+msgid "На этот день задач нет"
+msgstr ""
+
+#: .\templates\todo_app\todo_list.html:58
+msgid "Задачи на день"
+msgstr ""
+
+#: .\templates\todo_app\todo_update.html:4
+#: .\templates\todo_app\todo_update.html:9
+#: .\templates\todo_app\todo_update.html:13
+msgid "Изменить задачу"
+msgstr ""
+
+#: .\templates\todo_app\todo_update.html:7
+msgid "Моя задача"
+msgstr ""
+
+#: .\templates\todo_app\todo_update.html:8
+msgid "Выполнить до"
+msgstr ""
+
+#: .\todo_app\forms.py:13
+msgid "Ведите дату для сортировки мм/дд/гггг"
+msgstr ""
+
+#: .\todo_app\models.py:12
+msgid "Что нужно сделать"
+msgstr ""
+
+#: .\todo_app\models.py:13
+msgid "Когда выполнить"
+msgstr ""
+
+#: .\todo_app\models.py:14
+msgid "Статус задачи"
+msgstr ""
+
+#: .\todo_app\models.py:21
+msgid "Задачи"
+msgstr ""
+
+#: .\todo_app\views.py:72
+msgid "Успешно"
+msgstr ""
+
+#: .\todo_app\views.py:73
+msgid "Задача создана!"
+msgstr ""
+
+#: .\todo_app\views.py:77 .\todo_app\views.py:125
+msgid "Ошибка!"
+msgstr ""
+
+#: .\todo_app\views.py:93 .\todo_app\views.py:121
+msgid "Успешно!"
+msgstr ""
+
+#: .\todo_app\views.py:94
+msgid "Задача удалена"
+msgstr ""
+
+#: .\todo_app\views.py:122
+msgid "Задача успешно изменена!"
+msgstr ""

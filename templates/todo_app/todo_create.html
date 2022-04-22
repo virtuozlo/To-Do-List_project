@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}
+    {% trans 'Добавить задачу' %}
+{% endblock title %}
+{% block content %}
+    <h2>{% trans 'Добавить задачу' %}</h2>
+    <form method="post">
+        {% csrf_token %}
+        <p>{{ form.name }}</p>
+        {#        <p>{{ form.date }}</p>#}
+        <label>
+            <input type="date" name="date">
+        </label>
+        <button type="submit">{% trans 'В задачи!' %}</button>
+    </form>
+{% endblock content %}

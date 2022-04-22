@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}
+    {% trans 'Мои задачи' %}
+{% endblock %}
+{% block header %}
+    <form method="post">
+        {% csrf_token %}
+        <label>
+            <input type="date" name="date">
+        </label>
+        <button type="submit">{% trans 'Показать задачи на дату' %}</button>
+    </form>
+    <form method="post">
+        {% csrf_token %}
+        <input type="hidden" name="order" value="date">
+        <button type="submit">{% trans 'Отсортировать по дате' %}</button>
+    </form>
+    <form method="post">
+        {% csrf_token %}
+        <input type="hidden" name="order" value="check">
+        <button type="submit">{% trans 'Отсортировать по выполнению' %}</button>
+    </form>
+    <form method="post">
+        {% csrf_token %}
+        <label>
+            <input type="hidden" name="check">
+            <button type="submit">{% trans 'Показать выполненные задачи' %}</button>
+        </label>
+    </form>
+    <form method="post">
+        {% csrf_token %}
+        <label>
+            <input type="hidden" name="uncheck">
+            <button type="submit">{% trans 'Показать выполненные задачи' %}</button>
+        </label>
+    </form>
+{% endblock header %}
+{% block content %}
+    {% if todo_list %}
+        {% for todo in todo_list %}
+            <p><a href="{% url 'app_todo:todo_update' todo.id %}"> {% trans 'Задача' %}</a>: {{ todo }}
+                на {{ todo.date }} {% if todo.check %} {% trans 'Выполнена' %}{% else %}
+                    {% trans 'Не выполнена' %} {% endif %}</p>
+            <form method="post" action="{% url 'app_todo:todo_delete' %}">
+                {% csrf_token %}
+                <input type="hidden" name="todo_id" value="{{ todo.id }}">
+                <button type="submit">{% trans 'Удалить задачу' %}</button>
+            </form>
+
+        {% endfor %}
+    {% else %}
+        {% trans 'На этот день задач нет' %}
+    {% endif %}
+
+    {% if todo_list_date %}
+        {% trans 'Задачи на день' %}
+        {% for todo in todo_list_date %}
+            {{ todo }}
+        {% endfor %}
+    {% endif %}
+
+{% endblock content %}
