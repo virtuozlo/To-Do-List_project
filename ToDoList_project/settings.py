@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 import os
 from pathlib import Path
 from django.utils.translation import gettext_lazy as _
-from constants import dj_key
+from ToDoList_project.my_constants import dj_key
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 import django.middleware.locale
 

@@ -211,6 +211,6 @@ ENV/
 # mkdocs documentation
 /site
 
-ToDoList_project/constants.py
+ToDoList_project/my_constants.py
 
 # End of https://www.gitignore.io/api/macos,linux,django,python,pycharm
