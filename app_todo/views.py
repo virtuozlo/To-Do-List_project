@@ -1,11 +1,8 @@
 import datetime
 from django.utils.translation import gettext_lazy as _
-from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render
-from django.urls import reverse_lazy
-
 from app_todo.models import ToDo
-from app_todo.forms import ToDoForms, DateForm
+from app_todo.forms import ToDoForms
 
 
 def todo_list(request):
