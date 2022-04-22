@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 import os
 from pathlib import Path
 from django.utils.translation import gettext_lazy as _
+from constants import dj_key
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 import django.middleware.locale
 
@@ -21,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-yh==8(#1_yep&p*_jr*tnr+c)a4!w#ymdt+9=0*vuo8gf-7sp='
+SECRET_KEY = dj_key
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
