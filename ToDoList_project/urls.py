@@ -22,5 +22,6 @@ urlpatterns = [
     path('todo/', include('app_todo.urls')),
     path('i18n/', include('django.conf.urls.i18n')),
     path('api-auth/', include('rest_framework.urls')),
-    path('api/', include('app_todo_api.urls'))
+    path('api/', include('app_todo_api.urls')),
+    path('__debug__/', include('debug_toolbar.urls')),
 ]
