@@ -39,12 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admindocs',
+    'debug_toolbar',
     'rest_framework',
     'app_todo',
 ]
 #  Кэш будет после локали. А пока так
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -139,3 +141,49 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
 }
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {message} {funcName}s',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {funcName} {message}',
+            'style': '{',
+        }
+    },
+    'handlers': {
+        'u_file': {
+            'level': 'INFO',
+            'formatter': 'verbose',
+            'class': 'logging.FileHandler',
+            'filename': 'info.log'
+        },
+        'console': {
+            'level': 'INFO',
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console', 'u_file'],
+            'level': os.getenv('DJANGO_LOG_LEVEL', 'DEBUG'),
+            'propagate': False,
+        },
+        'app_todo.views': {
+            'handlers': ['console', 'u_file'],
+            'level': 'INFO',
+        },
+        'app_todo.models': {
+            'handlers': ['console', 'u_file'],
+            'level': 'INFO',
+        }
+    }
+}
+
+INTERNAL_IPS = [
+    '127.0.0.1'
+]

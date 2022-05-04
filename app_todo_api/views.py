@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from rest_framework import viewsets
 from app_todo.models import ToDo
 from app_todo_api.serializers import TodoSerializer
